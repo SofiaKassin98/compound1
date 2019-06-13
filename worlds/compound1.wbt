@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.6429938386365976 -0.7609137886039511 0.08700074590343755 0.2558712388604624
-  position -0.3200621685985349 0.09683239338335672 1.8157357213895637
+  orientation -0.4530682870158626 -0.8912466554809748 -0.020212035881832107 0.23088930182590076
+  position -0.3664045587777729 0.05914165580869049 2.0502298612742424
 }
 TexturedBackground {
 }
@@ -12,8 +12,9 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
+  translation 0 0.04 0
   children [
-    Group {
+    DEF GR_FRAME Group {
       children [
         Shape {
           appearance PBRAppearance {
@@ -44,4 +45,7 @@ Solid {
       ]
     }
   ]
+  boundingObject USE GR_FRAME
+  physics Physics {
+  }
 }
