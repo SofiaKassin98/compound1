@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.32265583988566293 0.9366688174483465 0.13617905642055783 0.8466944080103179
-  position 2.077356696495539 1.276960371788413 1.156804822865004
+  orientation -0.20499757628020043 0.9708177483421234 0.12445438209710896 1.117703174699113
+  position 1.7558527275454296 0.9801273077160558 0.6689888264806391
 }
 TexturedBackground {
 }
@@ -64,6 +64,34 @@ Solid {
           translation 0.15 -0.15 0
           children [
             USE SH_SPHERE
+          ]
+        }
+        DEF CY_DOWN_L Transform {
+          translation 0 -0.15 -0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF CY_UP_R Transform {
+          translation 0.15 0.15 -0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF CY_DOWN_R Transform {
+          translation 0.15 -0.15 -0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF CY_DOWN_L Transform {
+          translation 0 0.15 -0.15
+          rotation 1 0 0 1.5707996938995747
+          children [
+            USE SH_CYLINDER
           ]
         }
       ]
