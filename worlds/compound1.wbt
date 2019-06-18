@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.3049634485579519 0.9365481887377676 0.17284323884852537 1.088418660941816
-  position 1.3762298135688606 0.9113658205150961 0.9061496850426318
+  orientation -0.7644682112570019 0.6378962881655925 0.0931486957615579 0.37748262807345895
+  position 0.598479420143697 0.8494608439005862 2.5994397144801686
 }
 TexturedBackground {
 }
@@ -42,20 +42,53 @@ Solid {
             }
           ]
         }
+        DEF S_BL Transform {
+          translation 0 0.15 -0.3
+          children [
+            DEF SH_SPHERE Shape {
+              appearance PBRAppearance {
+                baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
         Transform {
           translation 0 -0.15 0
           children [
             USE SH_SPHERE
           ]
         }
-        Transform {
+        DEF CYLINDER_FRONT Transform {
           translation 0.3 0 0
           children [
             USE SH_CYLINDER
           ]
         }
-        Transform {
+        DEF CYLINDER_BACK Transform {
+          translation 0.3 0 -0.3
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF CYLINDER_BACK_L Transform {
+          translation 0 0 -0.3
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF S_FR Transform {
           translation 0.3 0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        DEF S_BR Transform {
+          translation 0.3 0.15 -0.3
           children [
             USE SH_SPHERE
           ]
