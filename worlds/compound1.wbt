@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.20499757628020043 0.9708177483421234 0.12445438209710896 1.117703174699113
-  position 1.7558527275454296 0.9801273077160558 0.6689888264806391
+  orientation -0.3049634485579519 0.9365481887377676 0.17284323884852537 1.088418660941816
+  position 1.3762298135688606 0.9113658205150961 0.9061496850426318
 }
 TexturedBackground {
 }
@@ -49,19 +49,25 @@ Solid {
           ]
         }
         Transform {
-          translation 0.15 0 0
+          translation 0.3 0 0
           children [
             USE SH_CYLINDER
           ]
         }
         Transform {
-          translation 0.15 0.15 0
+          translation 0.3 0.15 0
           children [
             USE SH_SPHERE
           ]
         }
-        Transform {
-          translation 0.15 -0.15 0
+        DEF S_DF Transform {
+          translation 0.3 -0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        DEF S_DB Transform {
+          translation 0.3 -0.15 -0.3
           children [
             USE SH_SPHERE
           ]
@@ -74,14 +80,14 @@ Solid {
           ]
         }
         DEF CY_UP_R Transform {
-          translation 0.15 0.15 -0.15
+          translation 0.3 0.15 -0.15
           rotation 1 0 0 1.5707996938995747
           children [
             USE SH_CYLINDER
           ]
         }
         DEF CY_DOWN_R Transform {
-          translation 0.15 -0.15 -0.15
+          translation 0.3 -0.15 -0.15
           rotation 1 0 0 1.5707996938995747
           children [
             USE SH_CYLINDER
@@ -90,6 +96,34 @@ Solid {
         DEF CY_DOWN_L Transform {
           translation 0 0.15 -0.15
           rotation 1 0 0 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF DOWN_FRONT Transform {
+          translation 0.15 -0.15 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF DOWN_BACK Transform {
+          translation 0.15 -0.15 -0.3
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF UP_FRONT Transform {
+          translation 0.15 0.15 0
+          rotation 0 0 1 1.5707996938995747
+          children [
+            USE SH_CYLINDER
+          ]
+        }
+        DEF UP_BACK Transform {
+          translation 0.15 0.15 -0.3
+          rotation 0 0 1 1.5707996938995747
           children [
             USE SH_CYLINDER
           ]
